@@ -21,7 +21,7 @@ You activate the plugin and then place the widget to your sidebar.
 
 == Installation ==
 
-Copy lolcats_widget folder to your plugins directory and activate it on your plugins panel. Then 
+Copy lolcats_widget folder to your plugins directory and activate it on your plugins panel. Then add the widget to your panel. Make sure there is a "cheezes" folder within your plugin and it is writable by the webserver!
 
 == Credits ==
 
