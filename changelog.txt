@@ -1,0 +1,4 @@
+Lolcats Widget Changelog
+
+- v1.0 -> v1.0.1
+	Added the "_blank" feature to the parser.
