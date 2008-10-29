@@ -12,10 +12,11 @@ Author URI: http://www.stratos.me
 function cheezburger_widget_image_retreiver(){
 	
 	//-----BEGIN DEFINITIONS-----------
-	$cache_timeout = 7200;//two hours caching before bringing in the new one
+	$cache_timeout = 1;//two hours caching before bringing in the new one
 	$image_path = ABSPATH.PLUGINDIR.'/lolcats_widget/cheezes/latest.jpeg';//path to save image
 	$link_path = ABSPATH.PLUGINDIR.'/lolcats_widget/cheezes/link.txt';//path to save image
 	$final_image_width = 150;//200px default width for image
+	$use_blank = true;//200px default width for image
 	//-----END DEFINITIONS---------------
 	
 	//checking if the cached image is fine
@@ -43,7 +44,10 @@ function cheezburger_widget_image_retreiver(){
 	$start = strpos($html, 'class="post"') + 12;
 	$start = strpos($html, '>', $start) + 1;
 	$end = strpos($html, '</h2>', $start);
-	$link = strip_tags(substr($html, $start, $end - $start), '<a>');
+	$link = trim(strip_tags(substr($html, $start, $end - $start), '<a>'));
+	if($use_blank){
+		$link = str_replace('<a', '<a target="_blank"', $link);
+	}
 	file_put_contents($link_path, $link);
 	
 	//got latest image in $src now resizing and caching
