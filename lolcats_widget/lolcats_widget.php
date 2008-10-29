@@ -16,7 +16,7 @@ function cheezburger_widget_image_retreiver(){
 	$image_path = ABSPATH.PLUGINDIR.'/lolcats_widget/cheezes/latest.jpeg';//path to save image
 	$link_path = ABSPATH.PLUGINDIR.'/lolcats_widget/cheezes/link.txt';//path to save image
 	$final_image_width = 150;//200px default width for image
-	$use_blank = true;//200px default width for image
+	$use_blank = true;//add an _blank to the lolcats page or not
 	//-----END DEFINITIONS---------------
 	
 	//checking if the cached image is fine
