@@ -1,7 +1,7 @@
 === Lolcats Widget ===
 Tags: lolcats icanhascheezburger
 Requires at least: 2.1
-Tested up to: 2.6.3
+Tested up to: 2.7.1
 Stable tag: trunk
 
 This plugin gives you a small widget that actually retreives the lates lolcat and displays it along with a link to it. It caches the image for two hours so it won't delay.
